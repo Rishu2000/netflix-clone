@@ -28,7 +28,7 @@ console.table(movies);
             <div className="row_posters">
                 {/* container -> posters */}
                 {movies.map((movie) => (
-                    <img className="row_poster" src={`${base_url}${movie.backdrop_path}`} alt={movie.name}/>
+                    <img key={movie.id} className="row_poster" src={`${base_url}${movie.backdrop_path}`} alt={movie.name}/>
                 ))}
             </div>
         </div>
