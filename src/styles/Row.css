@@ -1,5 +1,6 @@
 .row_posters {
   display: flex;
+  overflow-y: scroll;
 }
 
 .row_poster {
