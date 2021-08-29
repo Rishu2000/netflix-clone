@@ -16,6 +16,8 @@ useEffect(() => {
     fetchData();
 },[fetchUrl])
 
+console.table(movies);
+
     return (
         <div>
             {/* title */}
