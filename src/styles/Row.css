@@ -5,6 +5,10 @@
   overflow-x: scroll;
 }
 
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
 .row_poster {
   width: 100%;
   object-fit: contain;
