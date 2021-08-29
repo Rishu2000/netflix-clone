@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react'
 import axios from '../axios';
+import "../styles/Row.css"
 
 const Row = ({title, fetchUrl}) => {
+
+const base_url = 'https://image.tmdb.org/t/p/original/'
 
 const [movies, setMovies] = useState([]);
 
@@ -19,10 +22,15 @@ useEffect(() => {
 console.table(movies);
 
     return (
-        <div>
+        <div className="row">
             {/* title */}
             <h2>{title}</h2>
-            {/* container -> posters */}
+            <div className="row_posters">
+                {/* container -> posters */}
+                {movies.map((movie) => (
+                    <img className="row_poster" src={`${base_url}${movie.backdrop_path}`} alt={movie.name}/>
+                ))}
+            </div>
         </div>
     )
 }
