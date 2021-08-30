@@ -26,7 +26,7 @@ useEffect(() => {
             >
             <div className="banner_contents">
                 {/* title */}
-                <h1>{movie?.title || movie?.name || movie?.original_name}</h1>  {/**Interesting functionality using "?."*/}
+                <h1 className="banner_title">{movie?.title || movie?.name || movie?.original_name}</h1>  {/**Interesting functionality using "?."*/}
                 {/* div > 2 buttons */}
                 <div>
                     <button className="banner_button">Play</button>
