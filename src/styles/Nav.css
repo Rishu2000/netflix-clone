@@ -4,9 +4,12 @@
   width: 100%;
   padding: 20px;
   height: 30px;
-  background-color: black;
   display: flex;
   justify-content: space-between;
+}
+
+.nav_black {
+  background-color: black;
 }
 
 .nav_logo {

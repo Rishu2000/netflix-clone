@@ -12,12 +12,14 @@ useEffect(() => {
         }else{
             setScroll(false);
         }
-        window.removeEventListener("scroll");
     })
+    return () => {
+        window.removeEventListener("scroll");
+    };
 },[])
 
     return (
-        <div className="nav">
+        <div className={`nav ${scroll && "nav_black"}`}>
             <img 
                 className="nav_logo"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2014_logo.svg/450px-Netflix_2014_logo.svg.png"
