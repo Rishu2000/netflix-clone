@@ -36,7 +36,7 @@ const handleClick = (movie) => {
      if(trailerUrl){
         setTrailerUrl(null);
      }else{
-        movieTrailer(movie?.name || movie?.original_title || "")
+        movieTrailer(movie?.name || movie?.original_title || "")    //Amazing way of getting movie trailer just by using movie name.
             .then(url => {
                 console.log(url);
             })
