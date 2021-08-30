@@ -1,7 +1,21 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import "../styles/Nav.css"
 
 const Nav = () => {
+
+const [scroll, setScroll] = useState(false);
+
+useEffect(() => {
+    window.addEventListener("scroll", () => {
+        if(window.scrollY > 100){
+            setScroll(true);
+        }else{
+            setScroll(false);
+        }
+        window.removeEventListener("scroll");
+    })
+},[])
+
     return (
         <div className="nav">
             <img 
