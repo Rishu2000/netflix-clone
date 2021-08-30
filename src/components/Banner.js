@@ -15,6 +15,10 @@ useEffect(() => {
     fetchData();
 }, [])
 
+const truncate = (str,n) => {
+    return (str?.length > n ? str.substr(0,n-1) + "...": str);
+}
+
     return (
         <header     
             className="banner"
@@ -34,7 +38,7 @@ useEffect(() => {
                 </div>
                 {/* description */}
                 <h1 className="banner_description">
-                    {movie?.overview}
+                    {truncate(movie?.overview,150)}
                 </h1>
             </div>
         </header>
