@@ -39,7 +39,7 @@ const handleClick = (movie) => {
         movieTrailer(movie?.name || movie?.original_title || "", movie?.first_air_date?.slice(0,4))    //Amazing way of getting movie trailer just by using movie name.
             .then(url => {
                 const urlParams = new URLSearchParams(new URL(url).search);
-                console.log(urlParams.get("v"), movie?.first_air_date?.slice(0,4));
+                setTrailerUrl(urlParams.get("v"));
             })
             .catch(err => {
                 console.log(err);
