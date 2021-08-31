@@ -32,14 +32,14 @@ const opts = {
 }
 
 const handleClick = (movie) => {
-    // console.log(movie?.name);
+    // console.log(movie.first_air_date.slice(0,4));
      if(trailerUrl){
         setTrailerUrl(null);
      }else{
-        movieTrailer(movie?.name || movie?.original_title || "")    //Amazing way of getting movie trailer just by using movie name.
+        movieTrailer(movie?.name || movie?.original_title || "", movie?.first_air_date?.slice(0,4))    //Amazing way of getting movie trailer just by using movie name.
             .then(url => {
                 const urlParams = new URLSearchParams(new URL(url).search);
-                console.log(urlParams.get("v"));
+                console.log(urlParams.get("v"), movie?.first_air_date?.slice(0,4));
             })
             .catch(err => {
                 console.log(err);
